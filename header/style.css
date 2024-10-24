@@ -1,0 +1,88 @@
+body {
+    margin: 0px;
+}
+
+.headerSite {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    width: 100vw;
+    height: 80px;
+
+    background-color: #8D94BA;
+}
+
+.headerSite-items:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 10%;
+}
+
+.headerSite-items:nth-child(2) {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.headerSite-items:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 30%;
+}
+
+.headerSite-items:nth-child(4) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 20%;
+}
+
+#titreBout{
+    text-decoration: none;
+    font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    color:black;
+}
+#titreBout:hover{
+    cursor:grab;
+}
+.divBoutonProfil{
+    margin-top: 10px;
+}
+.boutonProfil{
+    background-color: #9A7AA0;
+    color: white;
+    border-radius: 10px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

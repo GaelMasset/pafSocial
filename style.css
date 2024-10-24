@@ -1,0 +1,42 @@
+.div-corps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    height: 90vh;
+    width: 100vw;
+}
+
+.child-corps:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 20%;
+}
+
+.child-corps:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 60%;
+
+    background-color: aqua;
+}
+
+.child-corps:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 20%;
+}

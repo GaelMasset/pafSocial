@@ -1,0 +1,72 @@
+.div-grosse {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    height: 90vh;
+    width: 100vw;
+    background-color: #A0CFD3;
+}
+
+.child-grosse:nth-child(1),
+:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.div-image-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    height: 90%;
+    width: 100%;
+}
+
+
+.child-image-info:nth-child(1),
+:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.icone{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.policeBonne{
+    font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+#pseudo{
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+.modifProfil{
+    text-align: center;
+}
