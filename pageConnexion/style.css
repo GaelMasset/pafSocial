@@ -1,41 +1,15 @@
-.div-grosse {
+.grosseDiv {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: normal;
     align-items: normal;
     align-content: normal;
-    height: 90vh;
     width: 100vw;
-    background-color: #EFE5DC;
+    height: 90vh;
 }
 
-.child-grosse:nth-child(1),
-:nth-child(2) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    min-width: 50%;
-    height: 100%;
-}
-
-.div-image-info{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: normal;
-    align-content: normal;
-    height: 100%;
-    width: 100%;
-}
-
-
-.child-image-info:nth-child(1),
-:nth-child(2) {
+.boiteForm:nth-child(1) {
     display: block;
     flex-grow: 0;
     flex-shrink: 1;
@@ -46,45 +20,62 @@
     height: 100%;
 }
 
-.div-haut-bas-profil{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: normal;
-    align-content: normal;
-}
-.child-haut-bas-profil:nth-child(1), :nth-child(2){
+.boiteForm:nth-child(2) {
     display: block;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
     order: 0;
-    height: 50%;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+.div-titre-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
     width: 100%;
+    height: 100%;
+}
+.child-titre-form:nth-child(1){
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 100%;
+    height: 20%;
+}
+.child-titre-form:nth-child(2){
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 100%;
+    height: 70%;
 }
 
-
-.icone{
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.policeBonne{
+p {
+    margin-left: auto;
+    margin-right: auto;
     font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-#pseudo{
-    margin-top: 10px;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
     font-size: 2em;
 }
 
-.modifProfil{
-    text-align: center;
+.formulaireStyle{
+    margin-left: auto;
+    margin-right: auto;
 }

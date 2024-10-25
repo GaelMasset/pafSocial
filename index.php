@@ -26,30 +26,37 @@
   <title>Reseau Paf</title>
 </head>
 <main>
-    <?php include 'header/header.php'; ?>
-    <div class="div-corps">
     <?php 
-
         //Si on a pas de pseudo (donc pas connecté)
         if(!isset($_SESSION['username'])){
-            echo '
-            <div class="child-corps"></div>
-                <div class="child-corps">',
-                include 'formulaireConnexion.php';
-                '</div>
-                <div class="child-corps"></div>
-            </div>
-
-            
-            '
+            header('Location: /pafSocial/pageConnexion/pageConnexion.php');
+            exit();
         ;};
-
-        if(isset($_SESSION['username'])){
-            echo 'bonjour' . $_SESSION['username'];
-        }
     ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/pafSocial/header/header.php'; ?>
+    
+    
+    <div class="div-envoyer-reste">
+        <div class="child-envoyer-reste">
+            <form id="formulaireMsg" class="formulaireStyle" action="envoieMessage.php" method="POST">
+                <div>
+                    <label class="msgLabel" for="contenu">Message:</label>
+                    <input class="inputMsg" id="msg" type="contenu" id="contenu" name="contenu" required>
+                </div>
+            </form>
+        </div>
+        <div class="child-envoyer-reste">
+            caca
+        </div>
+
+        
+
     </div>
-  <script></script>
+  <script src="jsIndex.js"></script>
 </main>
+
+<script>
+
+</script>
 
 </html>

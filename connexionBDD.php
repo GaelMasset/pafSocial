@@ -1,9 +1,9 @@
 <?php
-$host = 'localhost'; // Adresse du serveur
-$db = 'nom_de_ta_base'; // Nom de la base de données
-$user = 'nom_utilisateur'; // Nom d'utilisateur de la base de données
-$pass = 'mot_de_passe'; // Mot de passe de la base de données
-$charset = 'utf8mb4'; // Jeu de caractères
+$host = 'localhost';
+$db = 'nom_de_ta_base';
+$user = 'nom_utilisateur';
+$pass = 'mot_de_passe';
+$charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 

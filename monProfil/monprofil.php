@@ -47,15 +47,21 @@
             echo'
             <div class="div-grosse policeBonne">
                 <div class="child-grosse">
-                    <div class="div-image-info">
-                        <div class="child-image-info">
-                            <img class="icone" src="icon.png">
-                            <a class="modifProfil" href="/pafSocial/modifProfil/modifProfil.php">Modifier votre profil</a>
-                        </div>
-                        <div class="child-image-info">
-                            <div id="pseudo">
-                                Pseudo : ', $_SESSION['username'] ,'
+                    <div class="div-haut-bas-profil">
+                        <div class="child-haut-bas-profil">
+                            <div class="div-image-info">
+                                <div class="child-image-info">
+                                    <img class="icone" src="icon.png">
+                                </div>
+                                <div class="child-image-info">
+                                    <div id="pseudo">
+                                        Pseudo : ', $_SESSION['username'] ,'
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="child-haut-bas-profil">
+                            <a class="modifProfil" href="/pafSocial/modifProfil/modifProfil.php">Modifier votre profil</a>
                         </div>
                     </div>
                 </div>

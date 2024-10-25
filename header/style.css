@@ -12,7 +12,7 @@ body {
     width: 100vw;
     height: 80px;
 
-    background-color: #8D94BA;
+    background-color: #D0B8AC;
 }
 
 .headerSite-items:nth-child(1) {
@@ -79,10 +79,16 @@ body {
     margin-top: 10px;
 }
 .boutonProfil{
-    background-color: #9A7AA0;
-    color: white;
+    background-color: #D0B8AC;
+    color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 3px;
     padding-left: 10px;
     padding-right: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    border: NONE;
+}
+.boutonProfil:hover{
+    text-decoration: underline;
 }

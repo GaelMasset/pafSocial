@@ -3,10 +3,9 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $contenue = $_POST['contenu'];
 
-
+    $username = $_SESSION['username'];
     $host = 'localhost'; //adresse de bdd
     $db = 'reseaupaf'; //nom de la base de données
     $user = 'root'; //user de la base de données
@@ -18,18 +17,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $pdo = new PDO($dsn, $user, $pass);
 
-        $sql = "INSERT INTO utlisateur (pseudo, mdp) VALUES (:username, :password)";
+        $sql = "INSERT INTO messages (envoyeur, dateEnvoie, contenu) 
+        VALUES ('$username', NOW(), '$contenue')";
+
+
         $stmt = $pdo->prepare($sql);
         
-        if ($stmt->execute(['username' => $username, 'password' => $password])) {
-            $_SESSION['username'] = $username;
-            $_SESSION['logged_in'] = true;
+        $stmt->execute();
 
-            header('Location: /pafSocial/index.php');
-            exit();
-        }
+        header('Location: /pafSocial/index.php');
+        exit();
     } catch (Exception $e) {
-        echo "Erreur de connexion : " . $e->getMessage();
+        echo "Erreur d'envoie : " . $e->getMessage();
     }
 }
 ?>
