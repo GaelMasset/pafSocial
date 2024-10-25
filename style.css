@@ -1,37 +1,70 @@
 .div-envoyer-reste {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: normal;
-    align-content: normal;
     height: 90vh;
     width: 100vw;
 }
 .child-envoyer-reste:nth-child(1){
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 20%;
     width: 100%;
 }
 .child-envoyer-reste:nth-child(2){
+    display: block;
     height: 80%;
     width: 100%;
 }
 
 body {
     background-color: #EFE5DC;
-
-}
-
-.msgLabel{
-    font-size: 2em;
-    text-align: left;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
-    margin-left: 10%;
 }
+
+#texteEnvMsg{
+    font-size: 3em;
+    display: block;
+    text-align: center  
+}
+
+
 .inputMsg{
     height: 6vh;
     width: 50vw;
+}
+#formulaireMsg{
+    margin: auto;
+}
+#formulaireMsg > p{
+    font-size: 2em;
+}
+input[type=contenu]
+{
+    /* your styles here, You can just increase its font size below*/
+    font-size: 2em; 
+    font-weight: bold;
+    background-color: #ffedca;
+}
+
+.boiteMsg{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+
+    overflow: scroll;
+    height: 50%;
+    width: 60%;
+    background-color: #D0B8AC;
+}
+
+.msgDB{
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    color: rgb(0, 0, 0);
 }

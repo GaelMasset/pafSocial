@@ -5,7 +5,7 @@
 
         </div>
         <div class="headerSite-items">
-            <a id="titreBout" href="/pafSocial/">Reseau Paf</a>
+            <a id="titreBout" href="/pafSocial/">Mega Chat</a>
         </div>
         <div class="headerSite-items">
 

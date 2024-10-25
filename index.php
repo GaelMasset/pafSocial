@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
 
 
-  <title>Reseau Paf</title>
+  <title>MegaChat</title>
 </head>
 <main>
     <?php 
@@ -38,15 +38,15 @@
     
     <div class="div-envoyer-reste">
         <div class="child-envoyer-reste">
+            <span id="texteEnvMsg">Envoyer un message</span>
             <form id="formulaireMsg" class="formulaireStyle" action="envoieMessage.php" method="POST">
-                <div>
-                    <label class="msgLabel" for="contenu">Message:</label>
-                    <input class="inputMsg" id="msg" type="contenu" id="contenu" name="contenu" required>
-                </div>
+                <input class="inputMsg" id="msg" type="contenu" id="contenu" name="contenu" required>
             </form>
         </div>
         <div class="child-envoyer-reste">
-            caca
+            <?php 
+                include($_SERVER['DOCUMENT_ROOT'] . '/pafSocial/messages/messages.php');
+            ?>
         </div>
 
         

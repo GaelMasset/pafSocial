@@ -38,12 +38,41 @@
                 '</div>
                 <div class="child-corps"></div>
             </div>
-
-            
             '
         ;};
 
         if(isset($_SESSION['username'])){
+
+            //partie requete
+
+            $host = 'localhost'; // Adresse du serveur
+            $db = 'reseaupaf'; // Nom de la base de données
+            $user = 'root'; // Nom d'utilisateur de la base de données
+            $pass = ''; // Mot de passe de la base de données
+            $charset = 'utf8mb4'; //jsp faut mettre ca
+            $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+
+            try {
+                $pdo = new PDO($dsn, $user, $pass);
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Pour gérer les erreurs
+
+                $pseudo = $_SESSION['username'];
+                $sql = "SELECT count(*) as nbMes FROM messages where envoyeur = :pseudo";
+                $stmt = $pdo->prepare($sql);
+                $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+                $stmt->execute();
+
+
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $nbMes = $row['nbMes'];
+
+            } catch (PDOException $e) {
+                echo "Erreur : " . $e->getMessage();
+            }
+
+
+
+
             echo'
             <div class="div-grosse policeBonne">
                 <div class="child-grosse">
@@ -55,8 +84,10 @@
                                 </div>
                                 <div class="child-image-info">
                                     <div id="pseudo">
-                                        Pseudo : ', $_SESSION['username'] ,'
+                                        Pseudo : ', $_SESSION['username'] ,' <br/>
+                                        Nombre de messages envoyés :', $nbMes,'
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
